@@ -25,6 +25,7 @@ class MboxViewController: UIViewController, UIScrollViewDelegate , UIGestureReco
     @IBOutlet weak var RescheduleImageView: UIImageView!
     @IBOutlet var EdgeGesture: UIScreenEdgePanGestureRecognizer!
     
+    @IBOutlet var onTap: UITapGestureRecognizer!
     // Define Variables
     var messageInitialFrame: CGPoint!
     var laterInitialFrame: CGPoint!
@@ -166,5 +167,10 @@ class MboxViewController: UIViewController, UIScrollViewDelegate , UIGestureReco
 
             
             }
+    
+    @IBAction func onTap(sender: AnyObject) {
+        RescheduleImageView.alpha = 0
+            }
+    
         }
 

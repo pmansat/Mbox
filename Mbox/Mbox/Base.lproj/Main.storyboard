@@ -79,6 +79,10 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="reschedule" id="pCd-gS-Aii" userLabel="Reschedule">
                                         <rect key="frame" x="1" y="-3" width="320" height="572"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="oHR-MQ-thg" appends="YES" id="4WA-8Y-irN"/>
+                                        </connections>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="menu" id="bHt-t9-brS">
                                         <rect key="frame" x="1" y="1" width="320" height="568"/>
@@ -106,12 +110,18 @@
                         <outlet property="RescheduleImageView" destination="pCd-gS-Aii" id="Yhq-8c-WL4"/>
                         <outlet property="imageView" destination="1hk-Do-p90" id="jdh-Da-zSo"/>
                         <outlet property="messageImageView" destination="7OJ-Ys-TEy" id="4jO-N2-pri"/>
+                        <outlet property="onTap" destination="oHR-MQ-thg" id="pSj-9Q-mdk"/>
                         <outlet property="scrollView" destination="0M1-h6-ZN5" id="dbT-Yr-qtu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Q84-6h-Nul"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="w8p-oA-HOV"/>
+                <tapGestureRecognizer id="oHR-MQ-thg">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="tY4-yO-0hj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="162" y="323"/>
         </scene>
